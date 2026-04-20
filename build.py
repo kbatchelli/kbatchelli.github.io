@@ -32,7 +32,7 @@ def parse_post(filepath):
             body = parts[2].strip()
 
     slug = filepath.stem
-    meta.setdefault("title", slug.replace("-", " ").title())
+    meta.setdefault("title", slug.replace("-", " "))
     meta.setdefault("date", datetime.fromtimestamp(filepath.stat().st_mtime).strftime("%Y-%m-%d"))
     meta["slug"] = slug
 
