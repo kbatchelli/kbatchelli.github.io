@@ -1,0 +1,6 @@
+_site/
+__pycache__/
+*.pyc
+.#*
+\#*\#
+CLAUDE.md
