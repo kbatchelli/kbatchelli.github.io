@@ -230,6 +230,9 @@ def build():
         shutil.rmtree(OUTPUT_DIR)
     OUTPUT_DIR.mkdir()
 
+    # Tell GitHub Pages to skip Jekyll processing
+    (OUTPUT_DIR / ".nojekyll").touch()
+
     # Copy static files
     if STATIC_DIR.exists():
         for f in STATIC_DIR.iterdir():
